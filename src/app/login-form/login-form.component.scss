@@ -1,0 +1,32 @@
+$gray: #f1f1f1;
+$teal: #76D9EF;
+$blue: #1567E3;
+$white: #ffffff;
+
+@keyframes shadow-drop-2-bottom {
+  0% {
+    transform: translateZ(0) translateY(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: translateZ(50px) translateY(-20px);
+    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.form {
+  width: 400px;
+  height: 500px;
+  background: $white;
+  border-radius: 4px;
+  z-index: 2;
+  display: flex;
+  position: relative;
+  -webkit-animation: shadow-drop-2-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-moz-animation: shadow-drop-2-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: shadow-drop-2-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  .primary-action-button {
+    margin: auto;
+  }
+}

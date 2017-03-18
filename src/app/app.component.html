@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <nav class="navbar">
+    <div *ngIf="isLoggedIn" class="">
+      <p class="navbar-text">Logged In: {{user_displayName}} ({{user_email}})</p>
+      <p><button (click)="logout()">Logout</button></p>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
